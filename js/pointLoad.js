@@ -1,3 +1,13 @@
+
+const fondoPopup = document.querySelector('#fondo-popup');
+const botonCerrar = document.querySelector('#cerrar-popup');
+
+function cerrarPopup() {
+    fondoPopup.style.display = 'none';
+}
+
+botonCerrar.addEventListener('click', cerrarPopup);
+
 function getAllClients() {
     fetch('http://127.0.0.1:8080/prueba/clientes')
         .then(response => response.json())
@@ -48,9 +58,11 @@ function getAllClients() {
 }
 
 function pointLoad(id, amount) {
+    const titulo = document.querySelector('.capa-popup h2');
+    const parrafo = document.querySelector('.capa-popup p');
     const data = {
         'id': id,
-        'monto': amount
+        'monto': parseInt(amount)
     }
     const options = {
         method: 'POST',
@@ -59,13 +71,25 @@ function pointLoad(id, amount) {
             'Content-Type': 'application/json'
         }
     }
-    fetch('http://127.0.0.1:8080/servicio/carga-puntos', options)
-        .then(response => response.json())
+    fetch('http://127.0.0.1:8080/prueba/servicio/carga-puntos', options)
+        .then(response => {
+            console.log(`Response: ${response}`)
+            if (!response.ok) {
+                throw new Error('Ocurrió un error al hacer la solicitud');
+            }
+            return response.json();
+        })
         .then(data => {
             console.log(data)
+            titulo.innerText = "Exito"
+            parrafo.innerText = JSON.stringify(data)
+            fondoPopup.style.display = 'block';
         })
         .catch(error => {
             console.error(error)
+            titulo.innerText = "Error"
+            parrafo.innerText = error.message
+            fondoPopup.style.display = 'block';
         })
 }
 

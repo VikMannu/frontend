@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test Backend</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Test Backend</h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="contenedor">
+            <a href="index.html">Cargar Bolsa de Puntos</a>
+            <a href="load-point-usage.html">Cargar Uso de Puntos</a>
+            <a class="nav-bg--activo" href="check-amout-points.html">Verificar Cantidad de Puntos</a>
+        </nav>
+    </div>
+
+    <main class="contenedor sombra">
+        <h2>Cargar Bolsa de Puntos</h2>
+
+        <table id="clientes">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo electrónico</th>
+                    <th>Monto de la operación</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="js/pointLoad.js"></script>
+</body>
+
+</html>
