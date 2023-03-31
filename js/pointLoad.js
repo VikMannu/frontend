@@ -73,7 +73,7 @@ function pointLoad(id, amount) {
     }
     fetch('http://127.0.0.1:8080/prueba/servicio/carga-puntos', options)
         .then(response => {
-            console.log(`Response: ${response}`)
+            console.log(response)
             if (!response.ok) {
                 throw new Error('Ocurrió un error al hacer la solicitud');
             }
