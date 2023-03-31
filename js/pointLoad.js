@@ -59,7 +59,7 @@ function pointLoad(id, amount) {
             'Content-Type': 'application/json'
         }
     }
-    fetch('http://127.0.0.1:8080/servicio/carga-puntos', options)
+    fetch('http://127.0.0.1:8080/prueba/servicio/carga-puntos', options)
         .then(response => response.json())
         .then(data => {
             console.log(data)
