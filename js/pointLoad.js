@@ -6,7 +6,6 @@ function getAllClients() {
             const clientesTableBody = document.querySelector('#clientes tbody')
             data.forEach(client => {
                 const tr = document.createElement('tr');
-                tr.setAttribute('id', client.id)
 
                 const idTd = document.createElement('td');
                 idTd.textContent = client.id
