@@ -27,25 +27,30 @@
     </div>
 
     <main class="contenedor sombra">
-        <h2>Cargar Bolsa de Puntos</h2>
+        <section>
+            <h2>Consultar</h2>
+            <div class="contenedor-campos">
+                <div class="campo">
+                    <label>Monto</label>
+                    <input id="amount" class="input" type="number" placeholder="Monto">
+                </div>
+            </div>
 
-        <table id="clientes">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Correo electrónico</th>
-                    <th>Monto de la operación</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+            <div class="flex">
+                <button id="button-consult" class="boton" type="submit">Consultar</button>
+            </div>
+        </section>
     </main>
 
-    <script src="js/pointLoad.js"></script>
+    <div class="fondo-popup" id="fondo-popup">
+        <div class="capa-popup">
+            <h2>Este es un popup personalizado</h2>
+            <p>Aquí puedes agregar el contenido que desees</p>
+            <button class="boton-cerrar" id="cerrar-popup">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="js/checkAmounPoints.js"></script>
 </body>
 
 </html>
