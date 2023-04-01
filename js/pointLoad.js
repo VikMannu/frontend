@@ -82,7 +82,7 @@ function pointLoad(id, amount) {
         .then(data => {
             console.log(data)
             titulo.innerText = "Exito"
-            parrafo.innerText = JSON.stringify(data)
+            parrafo.innerText = data.message
             fondoPopup.style.display = 'block';
         })
         .catch(error => {
