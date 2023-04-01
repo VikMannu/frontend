@@ -244,13 +244,6 @@ footer {
     align-items: flex-end;
 }
 
-.servicios,
-nav,
-form {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-}
-
 @media (min-width: 768px) {
     .servicios {
         display: grid;
