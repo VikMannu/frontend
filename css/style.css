@@ -193,6 +193,7 @@ footer {
 
 .boton:hover {
     cursor: pointer;
+    opacity: 0.75;
 }
 
 @media (min-width: 769px) {

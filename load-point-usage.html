@@ -29,6 +29,10 @@
     <main class="container sombra">
         <h2>Cargar Uso de Puntos</h2>
 
+        <div>
+            <button id="load" class="boton">Cargar</button>
+        </div>
+
         <div class="grip">
             <div>
                 <table id="clientes">
@@ -39,6 +43,7 @@
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Correo electrónico</th>
+                            <th>Puntos Acumulados</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,6 +66,14 @@
             </div>
         </div>
     </main>
+
+    <div class="fondo-popup" id="fondo-popup">
+        <div class="capa-popup">
+            <h2>Este es un popup personalizado</h2>
+            <p>Aquí puedes agregar el contenido que desees</p>
+            <button class="boton-cerrar" id="cerrar-popup">Cerrar</button>
+        </div>
+    </div>
 
     <script src="js/pointLoadUsage.js"></script>
 </body>
