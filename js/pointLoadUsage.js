@@ -4,6 +4,7 @@ const listClients = []
 
 function cerrarPopup() {
     fondoPopup.style.display = 'none';
+    location.reload()
 }
 botonCerrar.addEventListener('click', cerrarPopup)
 
